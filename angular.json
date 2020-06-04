@@ -19,16 +19,17 @@
           "options": {
             "outputPath": "dist/angular-angularjs-hybrid",
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "main": "src/ng2/main.ts",
+            "polyfills": "src/ng2/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/ng2/assets",
+              "src/ng1"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/ng2/styles.scss"
             ],
             "scripts": []
           },
@@ -36,8 +37,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "src/ng2/environments/environment.ts",
+                  "with": "src/ng2/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -124,6 +125,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "angular-angularjs-hybrid"
 }
